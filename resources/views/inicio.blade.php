@@ -1,24 +1,18 @@
 @extends('layouts.plantilla')
-@section('title','Sistema Pedidos')
+@section('titulo','Sistema Pedidos')
 
-@section('nav')
-<ul>
-    <li><a href="#" style="color: #A4D2CF">Inicio</a></li>
-    <li><a href="#">Ingresar</a></li><!--{{route('ingresar')}}-->
-    <li><a href="#">Consulta</a></li><!--{{route('consult')}}-->
-    <li><a href="#">Contactanos</a></li><!--{{route('contact')}}-->
-</ul>
+@section('articulo1','Iniciar Sesión')
+@section('articulo2')
+  <form action="#" metod="POST">
+  <br>Correo Electronico:<input name="txtUsuario" type="text">
+  <br>Contraseña:<input type="password">
+  <br><input type="submit" value="Ingresar"><br>
+  </form>
+  <br>¿Eres nuevo?<a href="#">Registrate</a>
+  <br>¿Olvidaste tu contraseña?<br><a href="">Recuperar contraseña</a>
+  
 @endsection
-@section('content')
 
-<div class="piecito"> 
-  <ul>
-    <li>Acceso directo a los modulos del sistema: </li>
-    <li><a href="">Vacunas</a></li><!--{{route('vacunas.index')}}-->
-    <li><a href="">Pacientes</a></li><!--{{route('pacientes.index')}}-->
-    <li><a href="">Usuarios</a></li><!--{{route('usuarios.index')}}-->
-    <li><a href="">Aplicaciones</a></li><!--{{route('aplicaciones.index')}}-->
-  </ul>
-</div>
-
+@section('piedepagina')
+<a href="#">Mis redes</a>
 @endsection
