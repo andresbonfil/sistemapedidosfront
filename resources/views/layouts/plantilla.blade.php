@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="{{asset('css/plantilla.css')}}">
 </head>
 <body>
-    <h1>COTISAZACIONES BONFIL</h1>
-    <h2>On constructuchor...</h2>
-    <img src="{{asset('images/otras/constru.jpg')}}" alt="No sale :("><br>
-    @yield('contenido')
+    <header>
+        <h2><a href="" style="color:white; text-decoration:none"><!--{{route('home')}}-->
+        Sistema pedidos</a>
+        </h2>
+        @yield('nav')
+    </header>
+    @yield('content')
+    Contenido
+    <footer>
+    <hr>
+    footer
+    </footer>
 </body>
 </html>
