@@ -47,6 +47,7 @@ article form input{
     border: 1px solid black; 
     border-radius: 5px;
     color: black;
+    background-color: gray;
 }
 article form input[type=submit]{
     width: 200px;
@@ -58,6 +59,17 @@ article form input[type=submit]{
 article form input[type=submit]:hover{
     background-color: gray;
     color:white;
+}
+article form select{
+    margin-right: auto;margin-left: auto;
+    padding:5px; 
+    display:block;
+    height: 40px; width: 270px;
+    font-size: 18px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    color: black;
+    background-color: gray;
 }
 article a{
     text-decoration: none;

@@ -11,7 +11,7 @@
         Sistema de Cotizaciones Bonfil
         <hr>
         <ul>
-            <li><a href="">Inicio</a></li>
+            <li><a href="{{route('inicio')}}">Inicio</a></li>
             <li><a href="">Contactanos</a></li>
             <li><a href="">Acerca de</a></li>
         </ul>
@@ -22,9 +22,10 @@
     </article>
     <br>
     <footer>
-        CopyRights Todos los Derechos Reservados
+        Copyrights Todos los Derechos Reservados
         <hr>
         @yield('piedepagina')
     </footer>
 </body>
 </html>
+<script src="{{asset('js/scripts.js')}}"></script>
