@@ -9,7 +9,7 @@ class InicioController extends Controller
 {
     public function registrarsePost(Request $request){
         $respuesta =
-        Http::post('http://127.0.0.1:8000/api/usuario', [
+        Http::post('https://sistemapedidosback.herokuapp.com/api/usuario', [
             'txtNombre' => $request->nombre,
             'txtTipoc' => $request->tipoc,
             'txtEmail' => $request->email,
@@ -31,7 +31,7 @@ class InicioController extends Controller
     
     public function recontraPost(Request $request){
         $respuesta =
-        Http::post('http://127.0.0.1:8000/api/usuario/recontra', [
+        Http::post('https://sistemapedidosback.herokuapp.com/api/usuario/recontra', [
             'txtEmail' => $request->email
         ]);
         $dato=json_decode($respuesta);
