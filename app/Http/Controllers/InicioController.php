@@ -19,12 +19,12 @@ class InicioController extends Controller
         if($dato->estatus=='Aprobado'){
             
             return 'Tu correo electronico: <b>'.$dato->info.'</b> ha sido registrado exitosamente.
-            <br>Da click en el enlace para <h1><a href="../public/">Iniciar Sesión</a></h1>';
+            <br>Da click en el enlace para <h1><a href="../">Iniciar Sesión</a></h1>';
         }
         if($dato->estatus=='Rechazado'){
             return '<b>ERROR :</b> El correo electronico: <b>'.$dato->info.'</b><br>
             ya existe en el sistema, intente recuperar su contraseña
-            <h1><a href="../public/">Regresar</a><h1>';
+            <h1><a href="../">Regresar</a><h1>';
         }        
         return 'Ocurrio un problema con la petición';
     }
@@ -39,12 +39,12 @@ class InicioController extends Controller
         if($dato->estatus=='Aprobado'){
             
             return 'Se ha enviado un correo a : <b>'.$dato->info.'</b> sigue las instrucciones.
-            <br>Da click en el enlace para <h1><a href="../public/">Iniciar Sesión</a></h1>';
+            <br>Da click en el enlace para <h1><a href="../">Iniciar Sesión</a></h1>';
         }
         if($dato->estatus=='Rechazado'){
             return '<b>ERROR :</b> El correo electronico: <b>'.$dato->info.'</b><br>
             No existe en nuestra base de datos, verifique su informacion.
-            <h1><a href="recontra">Regresar</a><h1>';
+            <h1><a href="../">Regresar</a><h1>';
         }        
         return 'Ocurrio un problema con la petición';
     }
