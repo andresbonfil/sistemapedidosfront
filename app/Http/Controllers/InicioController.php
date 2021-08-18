@@ -7,6 +7,25 @@ use Illuminate\Support\Facades\Http;
 
 class InicioController extends Controller
 {
+    public function loginPost(Request $request){
+        
+        $respuesta =
+        Http::post('https://sistemapedidosback.herokuapp.com/api/usuario/login', [
+            'email' => $request->email,
+            'password' => $request->password
+        ]);
+        $dato=json_decode($respuesta);
+        
+        if($dato->estatus=='Aprobado'){
+            
+            return 'usuario valido'.$dato->info.'ya chingue de aqui mando a panel respectivo';
+        }
+        if($dato->estatus=='Rechazado'){
+            return 'aqui valio madres no se encontro'.$dato->info.'regresamos patras';
+        }        
+        return 'Ocurrio un problema con la petición';
+    }
+
     public function registrarsePost(Request $request){
         $respuesta =
         Http::post('https://sistemapedidosback.herokuapp.com/api/usuario', [
